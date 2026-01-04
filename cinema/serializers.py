@@ -6,7 +6,7 @@ from cinema.models import Actor, Genre, CinemaHall, Movie, MovieSession
 class ActorSerializer(serializers.ModelSerializer):
     full_name = serializers.SerializerMethodField()
 
-    def get_full_name(self, obj):
+    def get_full_name(self, obj) -> str:
         return str(obj)
 
     class Meta:
